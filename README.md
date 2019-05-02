@@ -19,7 +19,7 @@ Tu peux y acceder via: http://localhost:3000/home
 c = City.create(name: "Paris", zip_code: "75000")<br>
 c.id
 
-Utilise c.id pour la ville dans ta création de Compte Utilisateur
+Utilise <b>c.id</b> pour la ville dans ta création de Compte Utilisateur
 
 
 -> Pour créer un Compte Utilisateur http://localhost:3000/sessions/new
