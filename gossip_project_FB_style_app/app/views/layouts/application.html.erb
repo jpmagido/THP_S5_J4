@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>GossipProjectApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="<%= home_path %>">Home ||<span class="sr-only">(current)</span></a>
+     
+      <% if current_user %>
+      <a class="nav-item nav-link" href="<%= gossips_index_path %>">Index Gossips |</a>
+      <%end%>
+      <a class="nav-item nav-link" href="<%= team_path %>">Team |</a>
+      <a class="nav-item nav-link" href="<%= contact_path %>">Contact |</a>
+      
+      <% if current_user %>
+      <a class="nav-item nav-link" href="<%= sessions_profile_path %>" >Mon profil</a>
+      <%else%>
+      <a class="nav-item nav-link" href="<%= new_session_path %>" >Login</a>
+      <%end%>
+
+    </div>
+  </div>
+</nav>
+</header>
+
+  <body>
+    <div class="div1">
+    <%= yield %>
+    </div>
+  </body>
+</html>

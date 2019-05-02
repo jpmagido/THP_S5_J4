@@ -1,0 +1,18 @@
+
+<% if current_user %>
+	<h2>Bienvenue <%= current_user.first_name %> <%= current_user.last_name %></h2><br>
+
+	<br><p>>><a href="<%= user_path(current_user.id) %>">  Ta page auteur</a></p>
+
+	<br><p>>><a href="<%= new_gossip_path %>">  Créer un Potin</a></p><br>
+
+	<br><p>>><%= link_to " Se déconnecter ", session_path(session[:user_id]), method: :delete %><<</p>
+
+	<%else%>
+	<p>Vous n'êtes pas connecté</p><br> 
+	<p><a href="<%= new_session_path %>">Login</a></p>
+<%end%>
+
+
+
+

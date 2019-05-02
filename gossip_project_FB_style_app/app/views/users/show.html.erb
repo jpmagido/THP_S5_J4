@@ -1,0 +1,12 @@
+<h1>Hello ma ptite salope !</h1><br><br>
+
+<p>Profil auteur :</p><br>
+
+
+<div class="card" style="width: 600px;">
+  <div class="card-body">
+    <h5 class="card1-title"> <%=User.find(@id_user).last_name%> <%=User.find(@id_user).first_name%></h5><hr>
+    <p class="card1-text">Age: <%=User.find(@id_user).age%> ans<br>E-mail: <%=User.find(@id_user).email%><br>Ville: <%=City.find(User.find(@id_user).city_id).name%><br><br><u>Description:</u> <br><%=User.find(@id_user).description%><br></p>
+    <a href="<%= city_path(@id_city.id) %>" class="card1-link">Voir la ville</a>
+  </div>
+</div>

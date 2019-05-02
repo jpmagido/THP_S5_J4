@@ -1,0 +1,40 @@
+<h1>Hello ma ptite salope !</h1><br><br>
+
+<p>Voici ton potin préféré :</p><br>
+
+
+
+<div class="card" style="width: 600px;">
+  <div class="card-body">
+    <h5 class="card1-title">Auteur: <u><%= User.find(Gossip.find(@id_lien).user_id).first_name %> <%= User.find(Gossip.find(@id_lien).user_id).last_name %></u></h5>
+    <p>City: <u><%= City.find(User.find(Gossip.find(@id_lien).user_id).city_id).name %></u></p> <hr><br>
+    <h6 class="card1-subtitle mb-2 text-muted">Titre: <%= @gossip_one.title %></h6>
+    <p class="card1-text">Contenu: <%= @gossip_one.content %></p>
+    
+    <% if current_user.id == @gossip_one.user_id%>
+      <a href="<%= edit_gossip_path(@gossip_one.id) %>" class="card1-link">Editer le Gossip</a>
+  	
+      <a href="<%= gossip_path(@gossip_one.id) %>" class="card1-link" data-confirm="Êtes-vous certain ?" data-method="DELETE">Supprimer le Gossip</a><br>
+    <%end%>
+
+    <a href="<%= user_path(@id_user) %>" class="card1-link">Voir l'Auteur</a>
+
+    <a href="<%= gossips_index_path %>" class="card1-link">Retour Index</a>
+  </div>
+
+  <div class="card-body">Commentaire:
+  <div class="div_to_hide"><%@comment_all.each do |comment| %></div>
+    <ul>
+    <li><%= @gossip_one.comment %></li>
+    </ul>
+    <div class="div_to_hide"><%end%></div>
+<% if current_user.id == @gossip_one.user_id%>
+    <p><a href="<%= edit_gossip_path(@gossip_one.id) %>" class="card1-link">Ajouter/Editer le Commentaire</a></p>
+<%end%>
+
+  </div>
+
+
+
+</div>
+

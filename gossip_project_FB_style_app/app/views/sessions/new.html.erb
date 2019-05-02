@@ -1,0 +1,17 @@
+<h1>Hello ma ptite salope !</h1><br><br>
+
+<p>Connectes-toi pour voir tous les gossips du site !!</p><br>
+
+<%= form_tag sessions_path do %>
+
+	<label>Ton email</label><br>
+	<%= text_area_tag(:email) %><br>
+
+	<label>Ton Mot de passe</label><br>
+	<%= password_field_tag(:password) %><br><br>
+
+ 	<%= submit_tag("valider") %>
+<% end %>
+
+<br><br><h4>Si tu n'as pas encore de profil, tu peux t'enregistrer ici: 
+	<a href="<%= new_user_path %>">Login</a> </h4>

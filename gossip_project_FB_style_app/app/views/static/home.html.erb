@@ -1,0 +1,13 @@
+<h1>Hello ma ptite salope !</h1>
+
+<br><br>
+
+<% if current_user %>
+<br><p>>><a href="<%= user_path(current_user.id) %>"> Ta page auteur</a></p><br>
+<p>>><a href="<%= new_gossip_path %>" > Créer un Gossip</a></p><br>
+<p>>><a href="<%= gossips_index_path %>" > Tous les Gossips</a></p><br>
+
+<% else%>
+<p>Pour te Log-in clique sur ce lien: <a class="nav-item nav-link" href="<%= new_session_path %>" >Login</a></p>
+
+<% end%>

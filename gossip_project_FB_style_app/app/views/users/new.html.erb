@@ -1,0 +1,29 @@
+<h1>Hello ma ptite salope !</h1><br><br>
+
+<p>Créer ton profil Utilisateur via ce formulaire:</p><br>
+
+
+
+  
+<%= form_for @user, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+	<div class="form-group">
+	<label>Ton prénom</label><br>
+  <%= f.text_field :first_name %><br>
+  	<label>Ton nom</label><br>
+  <%= f.text_field :last_name %><br>
+  <label>Ton mot de passe</label><br>
+  <%= f.text_field :password %><br><br>
+
+	<label>Description</label><br>
+  <%= f.text_area :description, size: "60x3" %><br><br>
+  <label>Ton email</label><br>
+  <%= f.text_field :email %><br>
+  <label>Ton age</label><br>
+  <%= f.text_field :age %><br>
+  <label>Ta ville(23)</label><br>
+  <%= f.text_field :city_id %><br><br>
+  <%= f.submit "Créer" %>
+  </div>
+<% end %>
+
+<br><br><p>Si après avoir cliqué sur "Créer" vous êtes toujours sur cette page, vous avez fait une erreur dans le formulaire</p>

@@ -1,0 +1,23 @@
+<h1>Hello ma ptite salope !</h1><br><br>
+
+<h2>Tu peux cliquer sur ce lien pour créer un nouveau Gossip</h2><br>
+
+<p><a href="<%= new_gossip_path %>">Création Gossip</a></p>
+<br><br><hr><br><br>
+
+
+<h2>Voici les potins :</h2><br><br>
+
+<div class="div_to_hide"> <%= @gossips.each do |gossip|%></div>
+<div class="div_main">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Auteur: <u><%=User.find(gossip.user_id).first_name%> <%=User.find(gossip.user_id).last_name%></u></h5>
+    <h6 class="card-subtitle mb-2 text-muted">Titre: <%= gossip.title %></h6>
+    <p class="card-text">Si tu es curieux, tu peux cliquer sur le lien ci-dessous pour aller découvrir le contenu de ce gossip</p>
+    <a href="<%= gossip_path(gossip.id) %>" class="card-link">Lien du Gossip</a>
+  </div>
+</div>
+</div>
+<div class="div_to_hide"><% end %></div>
+

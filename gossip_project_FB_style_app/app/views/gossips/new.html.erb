@@ -1,0 +1,16 @@
+<h1>Hello ma ptite salope !</h1><br><br>
+
+<p>Tu vas pouvoir enregister ton propre Gossip via ce formulaire, à toi de jouer !!</p><br>
+
+
+
+  
+<%= form_for @gossip, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+	<div class="form-group">
+	<label>Titre du Gossip</label><br>
+  <%= f.text_field :title %><br><br>
+	<label>Contenu du Gossip</label><br>
+  <%= f.text_area :content, size: "60x3" %><br><br>
+  <%= f.submit "Créer" %>
+  </div>
+<% end %>
