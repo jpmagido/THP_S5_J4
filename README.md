@@ -10,9 +10,11 @@ Tu peux y acceder via: http://localhost:3000/home
 
 <br><br>
 <u>Attention</u>
-N'utilise pas les seeds
-<br>
-<b>Rails console (Copie/Colle):</b>
+ ******* N'utilise pas les seeds *******
+<br><br>
+
+
+<b>Rails console (Copie/Colle):</b><br>
 c = City.create(name: "Paris")
 c.id
 
