@@ -8,10 +8,10 @@ C'est mon projet Gossip v.Facebook
 
 Tu peux y acceder via: http://localhost:3000/home
 
-
+<br><br>
 <u>Attention</u>
 N'utilise pas les seeds
-
+<br>
 <b>Rails console (Copie/Colle):</b>
 c = City.create(name: "Paris")
 c.id
