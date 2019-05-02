@@ -9,9 +9,14 @@ C'est mon projet Gossip v.Facebook
 Tu peux y acceder via: http://localhost:3000/home
 
 
-<s>Attention</s>
+<u>Attention</u>
 N'utilise pas les seeds
 
+<b>Rails console (Copie/Colle):</b>
+c = City.create(name: "Paris")
+c.id
+
+Utilise c.id pour la ville dans ta création de Compte Utilisateur
 
 
-J'ai pas fait les likes et surement 2-3 détails
+-> Pour créer un Compte Utilisateur, va sur le site et clique sur "Login"
