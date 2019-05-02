@@ -22,4 +22,4 @@ c.id
 Utilise <b>c.id</b> pour la ville dans ta création de Compte Utilisateur
 
 
--> Pour créer un Compte Utilisateur: http://localhost:3000/sessions/new
+-> Pour créer un Compte Utilisateur: http://localhost:3000/users/new
