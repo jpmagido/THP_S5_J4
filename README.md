@@ -15,7 +15,8 @@ Tu peux y acceder via: http://localhost:3000/home
 
 
 <b>Rails console (Copie/Colle):</b><br>
-c = City.create(name: "Paris")
+
+c = City.create(name: "Paris")<br>
 c.id
 
 Utilise c.id pour la ville dans ta création de Compte Utilisateur
