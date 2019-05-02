@@ -3,11 +3,11 @@
 <h2>Tu peux cliquer sur ce lien pour créer un nouveau Gossip</h2><br>
 
 <p><a href="<%= new_gossip_path %>">Création Gossip</a></p>
-<br><br><hr><br><br>
+<br><br><hr><br>
 
 
 <h2>Voici les potins :</h2><br><br>
-
+<div class="div_affichage">
 <div class="div_to_hide"> <%= @gossips.each do |gossip|%></div>
 <div class="div_main">
 <div class="card" style="width: 18rem;">
@@ -21,3 +21,4 @@
 </div>
 <div class="div_to_hide"><% end %></div>
 
+</div>

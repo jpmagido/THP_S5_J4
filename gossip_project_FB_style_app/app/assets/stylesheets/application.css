@@ -62,6 +62,21 @@ body{
 
 
 
+.div_affichage{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#navbarNavAltMarkup{
+	display: flex;
+	justify-content: space-between;
+
+}
+
+
+
+
+
 
 
 
